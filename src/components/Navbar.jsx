@@ -1,16 +1,20 @@
+import { Link } from "react-router-dom";
 import "./Navbar.css";
+
 function Navbar() {
   return (
     <nav className="navbar">
-      <a href="/" className="navbar-logo">
+      <Link to="/" className="navbar-logo">
         Logo
-      </a>
+      </Link>
 
       <div className="navbar-links">
-        <a href="/">Home</a>
-        <a href="/services">Services</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
+        <Link to="/">Home</Link>
+        <Link to="/services">Services</Link>
+        <Link to="/about">About</Link>
+        <Link to="/team">Team</Link>
+        <Link to="/portfolio">Portfolio</Link>
+        <Link to="/contact">Contact</Link>
       </div>
 
       <button className="navbar-menu" aria-label="Open navigation menu">
