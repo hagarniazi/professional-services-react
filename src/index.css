@@ -1,6 +1,45 @@
 :root {
   --text: #6b6375;
   --text-h: #08060d;
+  /* Typography */
+  --font-primary: 'Quicksand', sans-serif;
+  --font-secondary: 'Lato', sans-serif;
+
+  /* Heading */
+  --font-size-heading-large: 48px;
+  --line-height-heading-large: 66px;
+
+  --font-size-heading-small: 24px;
+  --line-height-heading-small: 32px;
+
+  /* Body */
+  --font-size-body-large: 20px;
+  --line-height-body-large: 30px;
+
+  --font-size-body-medium: 16px;
+  --line-height-body-medium: 24px;
+
+  --font-size-body-small: 14px;
+  --line-height-body-small: 20px;
+
+  /* Breadcrumb */
+  --font-size-breadcrumb: 12px;
+  --line-height-breadcrumb: 14px;
+
+  /* Weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+
+  /* Letter spacing */
+  --letter-spacing-default: 1px;
+  /* Spacing */
+  --spacing-4: 4px;
+  --spacing-8: 8px;
+  --spacing-10: 10px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-24: 24px;
+  --spacing-128: 128px;
   --bg: #fff;
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
