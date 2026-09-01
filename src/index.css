@@ -1,7 +1,7 @@
 :root {
   --text: #6b6375;
   --text-h: #08060d;
-    /* Typography */
+  /* Typography */
   --font-primary: 'Quicksand', sans-serif;
   --font-secondary: 'Lato', sans-serif;
 
@@ -32,7 +32,7 @@
 
   /* Letter spacing */
   --letter-spacing-default: 1px;
-    /* Spacing */
+  /* Spacing */
   --spacing-4: 4px;
   --spacing-8: 8px;
   --spacing-10: 10px;
