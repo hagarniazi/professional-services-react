@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Healthcare Digital Platform",
+    "description": "A digital platform designed to improve healthcare service management and provide a smoother experience for users.",
+    "category": "Digital Transformation",
+    "image": "/images/projects/healthcare-platform.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Retail Business Transformation",
+    "description": "A transformation project focused on improving retail operations, customer experience, and digital capabilities.",
+    "category": "Business Consulting",
+    "image": "/images/projects/retail-transformation.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Enterprise Technology Upgrade",
+    "description": "A technology modernization project that improved infrastructure, system performance, and operational efficiency.",
+    "category": "Technology Solutions",
+    "image": "/images/projects/technology-upgrade.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Financial Services Optimization",
+    "description": "A consulting project focused on optimizing processes and creating more efficient financial service operations.",
+    "category": "Project Management",
+    "image": "/images/projects/financial-optimization.jpg"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Sarah Ahmed",
+    "role": "Senior Business Consultant",
+    "bio": "Sarah helps organizations develop practical strategies and improve operational performance.",
+    "image": "/images/team/sarah-ahmed.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Omar Hassan",
+    "role": "Technology Consultant",
+    "bio": "Omar specializes in technology solutions and digital transformation for growing businesses.",
+    "image": "/images/team/omar-hassan.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Mariam Ali",
+    "role": "Project Manager",
+    "bio": "Mariam leads cross-functional teams and ensures projects are delivered efficiently and successfully.",
+    "image": "/images/team/mariam-ali.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Youssef Mohamed",
+    "role": "Business Analyst",
+    "bio": "Youssef analyzes business requirements and turns complex problems into actionable solutions.",
+    "image": "/images/team/youssef-mohamed.jpg"
+  }
+]
