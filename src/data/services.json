@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Business Consulting",
+    "description": "Strategic consulting services that help organizations improve performance, solve complex challenges, and achieve sustainable growth.",
+    "image": "/images/services/business-consulting.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Digital Transformation",
+    "description": "Modern digital solutions that streamline operations, improve customer experiences, and support long-term business transformation.",
+    "image": "/images/services/digital-transformation.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Technology Solutions",
+    "description": "Scalable technology solutions designed to address business needs, enhance productivity, and support reliable digital infrastructure.",
+    "image": "/images/services/technology-solutions.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Project Management",
+    "description": "Professional project management that keeps teams aligned, timelines on track, and business initiatives focused on measurable results.",
+    "image": "/images/services/project-management.jpg"
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Ahmed Khalil",
+    "role": "CEO, Horizon Group",
+    "content": "The team helped us clarify our strategy and improve the way we manage our business operations. The results were clear and measurable.",
+    "image": "/images/testimonials/ahmed-khalil.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Nour El-Sayed",
+    "role": "Operations Director, Nova Solutions",
+    "content": "Their approach was professional, practical, and focused on our real business needs. We saw a significant improvement in our processes.",
+    "image": "/images/testimonials/nour-el-sayed.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Karim Mostafa",
+    "role": "Managing Director, Axis Business",
+    "content": "Working with the team gave us a clearer direction for our digital transformation and helped us move forward with confidence.",
+    "image": "/images/testimonials/karim-mostafa.jpg"
+  }
+]
