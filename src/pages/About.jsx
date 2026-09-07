@@ -69,5 +69,4 @@ function About() {
     </SectionWrapper>
   );
 }
-
 export default About;
