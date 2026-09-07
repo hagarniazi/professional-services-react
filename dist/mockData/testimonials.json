@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Sarah Chen",
+    "role": "Founder, Northstar",
+    "quote": "The team translated a fuzzy vision into a launch plan that feels clear, premium, and genuinely effective."
+  },
+  {
+    "id": 2,
+    "name": "Omar Hassan",
+    "role": "Marketing Director, Luma",
+    "quote": "Our new website gave us more credibility and conversion power in a single quarter than our previous site did in two years."
+  },
+  {
+    "id": 3,
+    "name": "Priya Singh",
+    "role": "CEO, Aster Labs",
+    "quote": "They brought structure, taste, and speed. We launched with confidence and stayed focused on what mattered."
+  }
+]
