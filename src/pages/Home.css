@@ -1,0 +1,155 @@
+.home {
+  width: 100%;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  min-height: 650px;
+  width: 100%;
+  position:relative;
+
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  padding: var(--spacing-24);
+  box-sizing: border-box;
+}
+
+.hero-image {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 80% !important;
+  height: 80% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  z-index: 0 !important;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 1;
+  width: 75%;
+  max-width: 900px;
+  margin-bottom: 0;
+  background: rgba(255, 255, 255, 0.94);
+  text-align: center;
+  padding: 32px 40px;
+  box-sizing: border-box;
+}
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title {
+  text-align: center;
+
+  margin-bottom: var(--spacing-48);
+}
+
+.section-label {
+  margin: 0 0 var(--spacing-8);
+
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.section-title h2 {
+  margin: 0;
+
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 400;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: var(--spacing-24);
+}
+
+
+/* =========================
+   TESTIMONIALS
+========================= */
+
+.testimonials-section {
+  text-align: center;
+}
+
+.testimonials-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: var(--spacing-48);
+}
+.testimonials-grid .card-image {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto var(--spacing-16);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-role {
+  margin-top: var(--spacing-8);
+
+  font-size: 14px;
+}
+
+.testimonials-button {
+  margin-top: var(--spacing-48);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-48);
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 600px) {
+  .hero {
+    min-height: 550px;
+
+    padding: var(--spacing-16);
+  }
+
+  .hero-overlay {
+    padding: var(--spacing-24) var(--spacing-16);
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+home-cta {
+    padding: var(--spacing-64) var(--spacing-16);
+  }
+}
