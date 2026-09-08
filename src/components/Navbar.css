@@ -35,6 +35,29 @@
   cursor: pointer;
 }
 
+.theme-toggle {
+  border: none;
+  background: transparent;
+  color: var(--text-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 8px;
+  transition: 0.3s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+}
+
+.moon-icon,
+.sun-icon {
+  font-size: 24px;
+  line-height: 1;
+}
+
+
 @media (max-width: 768px) {
   .navbar-links {
     display: none;

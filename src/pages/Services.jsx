@@ -1,6 +1,8 @@
-import services from "../data/services.json";
+
 import "./Services.css";
 
+import { Link } from "react-router-dom";
+import useFetchMock from "../hooks/useFetchMock";
 import service1 from "../assets/services/image 1.png";
 import service2 from "../assets/services/image 2.png";
 import service3 from "../assets/services/image 3.png";
@@ -14,6 +16,18 @@ const serviceImages = [
 ];
 
 function Services() {
+  const { data: services, loading, error } = useFetchMock(
+    "/mockData/services.json"
+  );
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>{error}</p>;
+  }
+
   return (
     <main className="services-page">
 
@@ -43,18 +57,21 @@ function Services() {
       {/* Services */}
       <section className="services-list">
         {services.map((service, index) => (
-          <article className="service-item" key={service.id}>
-            <div className="service-image">
-              <img
-              src={serviceImages[index]}
-              alt={service.title}
-              />
+          <Link to={`/services/${service.id}`} className="service-link">
+            <article className="service-item" key={service.id}>
+              <div className="service-image">
+                <img
+                  src={serviceImages[index]}
+                  alt={service.title}
+                />
               </div>
+
               <div className="service-content">
                 <h2>{service.title}</h2>
                 <p>{service.description}</p>
-                </div>
-                </article>
+              </div>
+            </article>
+          </Link>
               ))}
               </section>
 

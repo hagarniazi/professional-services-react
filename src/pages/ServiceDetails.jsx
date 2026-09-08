@@ -1,38 +1,46 @@
 import React from "react";
+
+import { Link, useParams } from "react-router-dom";
+
+import useFetchMock from "../hooks/useFetchMock";
+
 import "./ServiceDetails.css";
 
 const ServiceDetails = () => {
+
+  const { serviceId } = useParams();
+
+  const { data: services, loading, error } = useFetchMock(
+    "/mockData/services.json"
+  );
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>{error}</p>;
+  }
+
+  const service = services.find(
+    (item) => String(item.id) === String(serviceId)
+  );
+
   return (
     <div className="service-details-page">
-      {/* Navbar */}
-      <header className="service-navbar">
-        <div className="service-logo">Logo</div>
-
-        <nav className="service-nav-links">
-          <a href="/">Home</a>
-          <a href="/services">Services</a>
-          <a href="/about">About</a>
-          <a href="/contact">Contact</a>
-        </nav>
-      </header>
 
       <main>
         {/* Hero / Service Intro */}
         <section className="service-intro">
           <div className="service-breadcrumb">
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
             <span>/</span>
-            <span>Strategic Planning Services</span>
+            <span>{service?.title}</span>
           </div>
 
-          <h1>Strategic Planning Services</h1>
+          <h1>{service?.title}</h1>
 
-          <p>
-            Our Strategic Planning Services are designed to help you set clear
-            goals and map out a path to achieve them. We work closely with you
-            to develop actionable strategies that align with your vision and
-            priorities, ensuring every step moves you closer to success.
-          </p>
+          <p>{service?.description}</p>
         </section>
 
         {/* Process */}
@@ -57,6 +65,7 @@ const ServiceDetails = () => {
             </p>
           </div>
         </section>
+
 
         {/* Previous Projects */}
         <section className="previous-projects">
@@ -143,45 +152,6 @@ const ServiceDetails = () => {
           </form>
         </section>
       </main>
-
-      {/* Footer */}
-      <footer className="service-footer">
-        <div className="footer-top">
-          <div className="footer-column footer-about">
-            <h3>About us</h3>
-            <p>
-              Helping businesses thrive with tailored solutions and expert
-              guidance. Driven by innovation, we focus on real results and
-              lasting partnerships.
-            </p>
-
-            <h4>Follow us on Social media</h4>
-          </div>
-
-          <div className="footer-column">
-            <h3>More</h3>
-            <a href="/faq">FAQ</a>
-            <a href="/shipping-returns">Shipping &amp; returns</a>
-            <a href="/contact">Contact</a>
-            <a href="/terms">Terms</a>
-            <a href="/privacy">Privacy</a>
-          </div>
-
-          <div className="footer-column">
-            <h3>Email list</h3>
-            <a href="/faq">FAQ</a>
-            <a href="/shipping-returns">Shipping &amp; returns</a>
-            <a href="/contact">Contact</a>
-            <a href="/terms">Terms</a>
-            <a href="/privacy">Privacy</a>
-          </div>
-        </div>
-
-        <div className="footer-bottom">
-          <span>Copyright 2024</span>
-          <span className="footer-logo">Logo</span>
-        </div>
-      </footer>
     </div>
   );
 };

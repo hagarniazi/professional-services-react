@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Button from "../components/Button";
 import Card from "../components/Card";
 import SectionWrapper from "../components/SectionWrapper";
-import services from "../data/services.json";
 import testimonials from "../data/testimonials.json";
 import profile1 from "../assets/Profile picture.png";
 import profile2 from "../assets/Profile picture (1).png";
@@ -14,8 +13,21 @@ import service2 from "../assets/image-container.png";
 import service3 from "../assets/image-container (1).png";
 import service4 from "../assets/image-container (2).png";
 import "./Home.css";
+import useFetchMock from "../hooks/useFetchMock";
 
 function Home() {
+  const { data: services, loading, error } = useFetchMock(
+    "/mockData/services.json"
+  );
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>{error}</p>;
+  }
+
   return (
     <main className="home">
 
