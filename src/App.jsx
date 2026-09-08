@@ -16,6 +16,7 @@ import {
   UserRound,
 } from 'lucide-react';
 import useFetchMock from './hooks/useFetchMock';
+import Services from './pages/Services';
 
 const BASE_URL = '/mockData';
 const serviceIcons = [Target, Palette, TrendingUp];
@@ -55,6 +56,9 @@ function CardToggle({ expanded, onToggle, label }) {
 }
 
 function App() {
+  if (window.location.pathname === '/services') {
+  return <Services />;
+}
   const [expandedCard, setExpandedCard] = useState(null);
   const services = useFetchMock(`${BASE_URL}/services.json`);
   const projects = useFetchMock(`${BASE_URL}/projects.json`);
