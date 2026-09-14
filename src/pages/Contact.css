@@ -223,6 +223,27 @@
   color: var(--contact-black);
   background-color: var(--contact-white);
 }
+/* Form Validation */
+
+.form-error {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #d9534f;
+}
+
+.form-success {
+  margin-top: 15px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #4c5365;
+}
+
+.contact-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
 
 
 @media (max-width: 900px) {
