@@ -100,3 +100,30 @@
   color: #222;
   text-decoration: none;
 }
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 16px 24px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-column h3 {
+    white-space: normal;
+  }
+
+  .footer-about p {
+    max-width: 100%;
+  }
+
+  .footer-bottom {
+    margin-top: 40px;
+  }
+
+  .footer-links {
+    gap: 12px;
+  }
+}
