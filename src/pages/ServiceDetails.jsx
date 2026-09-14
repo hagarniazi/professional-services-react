@@ -1,4 +1,3 @@
-import React from "react";
 
 import serviceMainImage from "../assets/image (9).png";
 
