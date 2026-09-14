@@ -1,38 +1,48 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from 'react';
 
-function useFetchMock(url) {
+const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+export default function useFetchMock(url) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    setLoading(true);
-    setError(null);
+    let isMounted = true;
 
-    const timer = setTimeout(() => {
-      fetch(url)
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error("Failed to fetch data");
-          }
+    const fetchData = async () => {
+      setLoading(true);
+      setError(null);
 
-          return response.json();
-        })
-        .then((result) => {
-          setData(result);
-        })
-        .catch((error) => {
-          setError(error.message);
-        })
-        .finally(() => {
+      try {
+        await wait(300);
+
+        const response = await fetch(url);
+
+        if (!response.ok) {
+          throw new Error(`Request failed with status ${response.status}`);
+        }
+
+        const jsonData = await response.json();
+
+        if (isMounted) {
+          setData(jsonData);
           setLoading(false);
-        });
-    }, 500);
+        }
+      } catch (err) {
+        if (isMounted) {
+          setError(err.message || 'An unknown error occurred');
+          setLoading(false);
+        }
+      }
+    };
 
-    return () => clearTimeout(timer);
+    fetchData();
+
+    return () => {
+      isMounted = false;
+    };
   }, [url]);
 
   return { data, loading, error };
 }
-
-export default useFetchMock;
