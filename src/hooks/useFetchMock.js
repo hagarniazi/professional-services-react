@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 function useFetchMock(url) {
   const [data, setData] = useState(null);
@@ -6,25 +6,21 @@ function useFetchMock(url) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    setLoading(true);
-    setError(null);
-
     const timer = setTimeout(() => {
       fetch(url)
         .then((response) => {
           if (!response.ok) {
-            throw new Error("Failed to fetch data");
+            throw new Error('Failed to fetch data');
           }
 
           return response.json();
         })
         .then((result) => {
           setData(result);
+          setLoading(false);
         })
-        .catch((error) => {
-          setError(error.message);
-        })
-        .finally(() => {
+        .catch((fetchError) => {
+          setError(fetchError.message);
           setLoading(false);
         });
     }, 500);
