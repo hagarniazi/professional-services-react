@@ -1,23 +1,26 @@
 [
   {
     "id": 1,
-    "icon": "✦",
-    "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=240&q=80",
-    "title": "Brand strategy",
-    "description": "Positioning, messaging, and strategic direction that make your business easier to trust and easier to choose."
+    "title": "Business Consulting",
+    "description": "Strategic consulting services that help organizations improve performance, solve complex challenges, and achieve sustainable growth.",
+    "image": "/images/services/business-consulting.jpg"
   },
   {
     "id": 2,
-    "icon": "◎",
-    "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=240&q=80",
-    "title": "UX design",
-    "description": "Clear interfaces, stronger journeys, and design systems that simplify decisions for your customers."
+    "title": "Digital Transformation",
+    "description": "Modern digital solutions that streamline operations, improve customer experiences, and support long-term business transformation.",
+    "image": "/images/services/digital-transformation.jpg"
   },
   {
     "id": 3,
-    "icon": "▣",
-    "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=240&q=80",
-    "title": "Growth marketing",
-    "description": "Campaigns and conversion strategies built to improve acquisition, retention, and long-term value."
+    "title": "Technology Solutions",
+    "description": "Scalable technology solutions designed to address business needs, enhance productivity, and support reliable digital infrastructure.",
+    "image": "/images/services/technology-solutions.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Project Management",
+    "description": "Professional project management that keeps teams aligned, timelines on track, and business initiatives focused on measurable results.",
+    "image": "/images/services/project-management.jpg"
   }
 ]
