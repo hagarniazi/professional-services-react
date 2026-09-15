@@ -6,9 +6,6 @@ function useFetchMock(url) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    setLoading(true);
-    setError(null);
-
     const timer = setTimeout(() => {
       fetch(url)
         .then((response) => {
@@ -20,11 +17,10 @@ function useFetchMock(url) {
         })
         .then((result) => {
           setData(result);
+          setLoading(false);
         })
-        .catch((error) => {
-          setError(error.message);
-        })
-        .finally(() => {
+        .catch((fetchError) => {
+          setError(fetchError.message);
           setLoading(false);
         });
     }, 500);

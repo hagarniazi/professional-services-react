@@ -1,8 +1,8 @@
 .section-wrapper {
   width: 100%;
-  max-width: 1126px;
+  max-width: var(--content-max, 1126px);
   margin: 0 auto;
-  padding: 40px var(--spacing-24);
+  padding: var(--spacing-64) var(--spacing-24);
   box-sizing: border-box;
 }
 
