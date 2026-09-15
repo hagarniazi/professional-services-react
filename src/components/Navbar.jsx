@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./Navbar.css";
 
@@ -20,17 +20,15 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <NavLink to="/" className="navbar-logo">
+      <Link to="/" className="navbar-logo">
         Logo
-      </NavLink>
+      </Link>
 
       <div className="navbar-links">
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/services">Services</NavLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/team">Team</NavLink>
-        <NavLink to="/portfolio">Portfolio</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
+        <Link to="/">Home</Link>
+        <Link to="/services">Services</Link>
+        <Link to="/about">About</Link>
+        <Link to="/contact">Contact</Link>
       </div>
 
       <button

@@ -1,6 +1,7 @@
 import "./About.css";
 
 import SectionWrapper from "../components/SectionWrapper";
+import team from "../data/team.json";
 import aboutImage from "../assets/about-image.svg";
 
 function About() {

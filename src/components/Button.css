@@ -7,12 +7,11 @@
   font-weight: var(--font-weight-regular);
   letter-spacing: var(--letter-spacing-default);
   cursor: pointer;
-  transition: background-color 0.3s ease,color 0.3s ease, transform 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 
 .button:hover {
   opacity: 0.85;
-  transform: translateY(-2px);
 }
 
 .button-primary {

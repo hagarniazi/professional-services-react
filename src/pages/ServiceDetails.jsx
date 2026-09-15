@@ -1,5 +1,4 @@
-
-import serviceMainImage from "../assets/image (9).png";
+import React from "react";
 
 import { Link, useParams } from "react-router-dom";
 
@@ -42,11 +41,6 @@ const ServiceDetails = () => {
           <h1>{service?.title}</h1>
 
           <p>{service?.description}</p>
-
-          <img
-           src={serviceMainImage}
-           alt="Business Consulting"
-           className="service-main-image"/>
         </section>
 
         {/* Process */}
@@ -74,63 +68,50 @@ const ServiceDetails = () => {
 
 
         {/* Previous Projects */}
-        {/* Previous Projects */}
-<section className="previous-projects">
-  <h2>Previous projects</h2>
+        <section className="previous-projects">
+          <h2>Previous projects</h2>
 
-  <div className="project-images">
-  <div className="project-image project-image-one"></div>
-  <div className="project-image project-image-two"></div>
-  <div className="project-image project-image-three"></div>
-  <div className="project-image project-image-four"></div>
-  <div className="project-image project-image-five"></div>
-  <div className="project-image project-image-six"></div>
-</div>
-</section>
+          <div className="project-images">
+            <div className="project-image project-image-one"></div>
+            <div className="project-image project-image-two"></div>
+            <div className="project-image project-image-three"></div>
+          </div>
+        </section>
 
         {/* Success Stories */}
-<section className="success-stories">
-  <h2>Success stories</h2>
+        <section className="success-stories">
+          <h2>Success stories</h2>
 
-  <div className="stories-list">
+          <div className="stories-grid">
+            <article className="story-card">
+              <p className="story-text">
+                As a small business owner, finding a reliable cleaning service
+                was a top priority. Ever since I started using this service, my
+                office has never looked better! The team is punctual, thorough,
+                and always goes the extra mile. They’ve truly taken the hassle
+                out of maintaining a clean and professional workspace. I can’t
+                recommend them enough!
+              </p>
 
-    <div className="story-item">
-      <div className="story-avatar story-avatar-one"></div>
+              <h3>James Rodriguez</h3>
+              <span>Owner - Rodriguez &amp; Co. Consulting</span>
+            </article>
 
-      <div className="story-content">
-        <p className="story-text">
-          As a small business owner, finding a reliable cleaning service was
-          a top priority. Ever since I started using this service, my office
-          has never looked better. The team is punctual, thorough, and always
-          goes the extra mile. They’ve truly taken the hassle out of
-          maintaining a clean and professional workspace.
-        </p>
+            <article className="story-card">
+              <p className="story-text">
+                I was struggling to keep up with the demands of managing
+                multiple properties, but this service has been a lifesaver. The
+                team is always reliable, professional, and responsive to
+                last-minute requests. They’ve made my life so much easier, and I
+                can focus on other priorities knowing my properties are in good
+                hands.
+              </p>
 
-        <h3>James Rodriguez</h3>
-        <span>Owner - Rodriguez & Co. Consulting</span>
-      </div>
-    </div>
-
-
-    <div className="story-item">
-      <div className="story-avatar story-avatar-two"></div>
-
-      <div className="story-content">
-        <p className="story-text">
-          I was struggling to keep up with the demands of managing multiple
-          properties, but this service has been a lifesaver. The team is
-          always reliable, professional, and responsive to last-minute
-          requests. They’ve made my life so much easier, and I can focus on
-          other priorities knowing my properties are in good hands.
-        </p>
-
-        <h3>Emily Nguyen</h3>
-        <span>Property Manager - Nguyen Realty Group</span>
-      </div>
-    </div>
-
-  </div>
-</section>
+              <h3>Emily Nguyen</h3>
+              <span>Property Manager - Nguyen Realty Group</span>
+            </article>
+          </div>
+        </section>
 
         {/* Contact */}
         <section className="get-in-touch">
