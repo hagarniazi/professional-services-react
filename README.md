@@ -4,7 +4,7 @@ A responsive professional services website built with React and Vite as part of 
 
 ## Live Demo
 
-[View the live website](professional-services-react.vercel.app)
+[View the live website](https://professional-services-react.vercel.app/)
 
 ## Overview
 
