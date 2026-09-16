@@ -95,6 +95,7 @@
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
   gap: 40px;
   align-items: center;
+  min-width: 0;
 }
 
 .service-image {
@@ -141,16 +142,23 @@
   font-weight: var(--font-weight-regular);
   line-height: 1.7;
   color: var(--text);
+  overflow-wrap: break-word;
 }
 
 /* =========================
    TABLET
 ========================= */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .services-page {
     padding: 0 var(--spacing-24) var(--spacing-48);
   }
 
+  .service-item {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 900px) {
   .services-header {
     padding: 56px var(--spacing-8) 16px;
   }
@@ -171,7 +179,7 @@
 /* =========================
    MOBILE — stack image above text
 ========================= */
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .services-page {
     padding: 0 var(--spacing-16) var(--spacing-48);
   }
@@ -181,7 +189,7 @@
   }
 
   .services-header h1 {
-    font-size: 30px;
+    font-size: clamp(28px, 8vw, 30px);
   }
 
   .services-intro {
@@ -224,10 +232,6 @@
 @media (max-width: 480px) {
   .services-header {
     padding-top: 40px;
-  }
-
-  .services-header h1 {
-    font-size: 28px;
   }
 
   .services-list {

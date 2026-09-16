@@ -4,6 +4,9 @@
 
 .navbar {
   width: 100%;
+  max-width: 100%;
+  position: relative;
+  z-index: 100;
   background-color: var(--bg);
   border-bottom: 1px solid var(--border);
   color: var(--text);
@@ -117,6 +120,21 @@
   color: var(--text-h);
 }
 
+@media (max-width: 900px) and (min-width: 769px) {
+  .navbar-inner {
+    padding: 0 var(--spacing-16);
+    gap: var(--spacing-16);
+  }
+
+  .navbar-links {
+    gap: 20px;
+  }
+
+  .navbar-right {
+    gap: 16px;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar-inner {
     min-height: 64px;
@@ -130,12 +148,15 @@
     top: 100%;
     left: 0;
     right: 0;
+    width: 100%;
+    max-width: 100%;
     flex-direction: column;
     align-items: stretch;
     gap: 0;
     padding: 8px 0 12px;
     background: var(--bg);
     border-bottom: 1px solid var(--border);
+    box-sizing: border-box;
     z-index: 20;
   }
 
@@ -145,10 +166,12 @@
 
   .navbar-links a {
     padding: 12px var(--spacing-16);
+    box-sizing: border-box;
   }
 
   .navbar-right {
     gap: 12px;
+    flex-shrink: 0;
   }
 
   .navbar-menu {

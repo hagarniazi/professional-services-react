@@ -95,15 +95,22 @@
   color-scheme: dark;
 }
 
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
+  max-width: 100%;
+  overflow-x: hidden;
   background-color: var(--bg);
   color: var(--text);
 }
 
 #root {
   width: 100%;
-  max-width: none;
+  max-width: 100%;
   margin: 0;
   text-align: left;
   min-height: 100svh;
@@ -111,6 +118,17 @@ body {
   flex-direction: column;
   box-sizing: border-box;
   background-color: var(--bg);
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 h1,

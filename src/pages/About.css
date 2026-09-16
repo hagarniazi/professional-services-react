@@ -69,7 +69,7 @@
 .about-image {
   display: block;
   width: 100%;
-  height: 320px;
+  height: clamp(200px, 28vw, 320px);
   object-fit: cover;
   object-position: center;
   border-radius: 0;
@@ -105,6 +105,7 @@
   line-height: 1.75;
   color: var(--text);
   text-align: left;
+  overflow-wrap: break-word;
 }
 
 .about-section p:last-child {
@@ -114,6 +115,13 @@
 /* =========================
    TABLET
 ========================= */
+@media (max-width: 1024px) {
+  .about-hero {
+    padding-top: 56px;
+    padding-bottom: 40px;
+  }
+}
+
 @media (max-width: 900px) {
   .about-hero {
     padding-top: 48px;
@@ -122,10 +130,6 @@
 
   .about-hero-text {
     margin-bottom: 28px;
-  }
-
-  .about-image {
-    height: 260px;
   }
 
   .about-section {
@@ -140,7 +144,7 @@
 /* =========================
    MOBILE
 ========================= */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .about-container {
     padding: 0 var(--spacing-16);
   }
@@ -155,15 +159,11 @@
   }
 
   .about-title {
-    font-size: 30px;
+    font-size: clamp(26px, 8vw, 30px);
   }
 
   .about-subtitle {
     font-size: 13px;
-  }
-
-  .about-image {
-    height: 200px;
   }
 
   .about-section {

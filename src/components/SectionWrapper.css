@@ -6,8 +6,14 @@
   box-sizing: border-box;
 }
 
+@media (max-width: 1024px) {
+  .section-wrapper {
+    padding: var(--spacing-48) var(--spacing-24);
+  }
+}
+
 @media (max-width: 768px) {
   .section-wrapper {
-    padding: var(--spacing-24) var(--spacing-16);
+    padding: var(--spacing-32) var(--spacing-16);
   }
 }

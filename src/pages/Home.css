@@ -118,7 +118,7 @@
    SERVICES SECTION
 ========================= */
 .services-section.section-wrapper {
-  padding-top: 72px;
+  padding-top: 96px;
   padding-bottom: 56px;
 }
 
@@ -135,6 +135,7 @@
   border-radius: 0;
   background: transparent;
   box-shadow: none;
+  min-width: 0;
 }
 
 .services-grid .card-image {
@@ -208,7 +209,7 @@
 
 .story-img {
   width: 100%;
-  height: 320px;
+  height: clamp(200px, 28vw, 320px);
   object-fit: cover;
   object-position: center;
   display: block;
@@ -341,6 +342,7 @@
   border: none;
   background: transparent;
   box-shadow: none;
+  min-width: 0;
 }
 
 .testimonials-grid .card-image {
@@ -418,6 +420,11 @@
   gap: 48px;
   align-items: start;
   text-align: left;
+}
+
+.contact-cta-text,
+.contact-cta-form {
+  min-width: 0;
 }
 
 .contact-cta-text h2 {
@@ -499,8 +506,24 @@
 }
 
 /* =========================
-   TABLET RESPONSIVE
+   TABLET / SMALL DESKTOP
 ========================= */
+@media (max-width: 1024px) {
+  .hero {
+    min-height: 500px;
+    height: 500px;
+  }
+
+  .services-section.section-wrapper {
+    padding-top: 88px;
+    padding-bottom: 48px;
+  }
+
+  .services-grid {
+    gap: 16px;
+  }
+}
+
 @media (max-width: 900px) {
   .hero {
     min-height: 440px;
@@ -508,12 +531,12 @@
   }
 
   .hero-overlay {
-    width: 88%;
+    width: min(560px, 88%);
     padding: 28px 24px 22px;
   }
 
   .services-section.section-wrapper {
-    padding-top: 56px;
+    padding-top: 80px;
     padding-bottom: 40px;
   }
 
@@ -526,8 +549,10 @@
     padding: 48px 0;
   }
 
-  .story-img {
-    height: 260px;
+  .story-section .section-title,
+  .story-section .story-content-wrapper {
+    padding-left: var(--spacing-24);
+    padding-right: var(--spacing-24);
   }
 
   .projects-mosaic-grid {
@@ -546,6 +571,10 @@
     grid-template-columns: 1fr;
     gap: 28px;
   }
+
+  .contact-cta-text p {
+    max-width: 100%;
+  }
 }
 
 /* =========================
@@ -562,13 +591,24 @@
     width: 100%;
     max-width: none;
     padding: 22px 16px 18px;
+    box-sizing: border-box;
   }
 
   .hero-overlay h1 {
     font-size: 22px;
   }
 
-  .services-section.section-wrapper,
+  .hero-overlay p {
+    font-size: 13px;
+  }
+
+  .services-section.section-wrapper {
+    padding-top: 88px;
+    padding-bottom: 40px;
+    padding-left: var(--spacing-16);
+    padding-right: var(--spacing-16);
+  }
+
   .testimonials-section.section-wrapper {
     padding: 40px var(--spacing-16);
   }
@@ -579,8 +619,10 @@
     margin: 0 auto;
   }
 
-  .story-img {
-    height: 200px;
+  .story-section .section-title,
+  .story-section .story-content-wrapper {
+    padding-left: var(--spacing-16);
+    padding-right: var(--spacing-16);
   }
 
   .projects-section-dark {
@@ -593,7 +635,7 @@
   }
 
   .projects-mosaic-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
 
@@ -609,5 +651,23 @@
   .testimonials-button .button,
   .hero-overlay .button {
     width: auto;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-overlay {
+    padding: 18px 14px 16px;
+  }
+
+  .hero-overlay h1 {
+    font-size: 20px;
+  }
+
+  .services-grid {
+    max-width: 100%;
+  }
+
+  .projects-mosaic-grid {
+    gap: 10px;
   }
 }
