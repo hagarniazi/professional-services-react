@@ -2,6 +2,10 @@
 
 A responsive professional services website built with React and Vite as part of the Nile University Front-End Internship Challenge.
 
+## Live Demo
+
+[View the live website](professional-services-react.vercel.app)
+
 ## Overview
 
 This project is a fully responsive React application designed to present professional services and provide users with information about the company and its services.
